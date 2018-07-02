@@ -34,7 +34,6 @@ public class FilePathTest {
         println("获取所有的类路径 包括jar包的路径" + System.getProperty("java.class.path"));
 
         println(FileSystems.getDefault().getPath("").toString());
-//F:\java\eclipseworkspace\my-project\mybatis-demo\mybatis-mapper\src\main\java\com\koko\entity\Role.java
 
     }
 
