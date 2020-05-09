@@ -1,7 +1,5 @@
 package com.ale;
 
-import sun.misc.Unsafe;
-
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -33,7 +31,6 @@ public class ReentrantLockDemo {
     }
 
 
-
     public static void method1() {
         lock.lock();
         try {
@@ -59,10 +56,11 @@ public class ReentrantLockDemo {
      */
     public static void testLockInterruptibly() {
         try {
-//            lock.lock();  // 不可以被打断
+            //            lock.lock();  // 不可以被打断
             lock.lockInterruptibly(); // 可以被打断
             System.out.println(Thread.currentThread().getName() + "开始工作");
-            while (true) { }
+            while (true) {
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
@@ -77,7 +75,8 @@ public class ReentrantLockDemo {
         if (lock.tryLock()) {
             try {
                 System.out.println(Thread.currentThread().getName() + "开始工作");
-                while (true) { }
+                while (true) {
+                }
             } finally {
                 lock.unlock();
             }
