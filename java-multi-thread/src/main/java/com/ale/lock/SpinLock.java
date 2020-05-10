@@ -1,4 +1,4 @@
-package com.ale;
+package com.ale.lock;
 
 import java.util.concurrent.atomic.AtomicReference;
 

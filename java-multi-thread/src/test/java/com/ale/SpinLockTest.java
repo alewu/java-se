@@ -1,5 +1,6 @@
 package com.ale;
 
+import com.ale.lock.SpinLock;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
