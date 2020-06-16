@@ -1,6 +1,4 @@
-package com.ale;
-
-import sun.misc.Unsafe;
+package com.ale.lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
