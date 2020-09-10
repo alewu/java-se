@@ -25,7 +25,6 @@ public class MyMonitorThread implements Runnable {
     @Override
     public void run() {
         while(run){
-            System.out.print(LocalDateTime.now());
             System.out.println(
                     String.format("[monitor] [%d/%d] Active: %d, Completed: %d, Task: %d, isShutdown: %s, isTerminated: %s",
                                   this.executor.getPoolSize(),

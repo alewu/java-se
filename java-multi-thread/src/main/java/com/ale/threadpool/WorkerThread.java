@@ -17,9 +17,9 @@ public class WorkerThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(LocalDateTime.now() + " " + Thread.currentThread().getName() + " Start. Command = " + command);
+        System.out.println(Thread.currentThread().getName() + " Start. Command = " + command);
         processCommand();
-        System.out.println(LocalDateTime.now() + " " + Thread.currentThread().getName() + " End.");
+        System.out.println(Thread.currentThread().getName() + " End.");
     }
 
     private void processCommand() {
