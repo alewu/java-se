@@ -1,4 +1,4 @@
-package com.ale;
+package com.ale.threadpool;
 
 import com.ale.thread.CustomThreadFactory;
 import com.ale.thread.ExceptionTask;

@@ -1,4 +1,4 @@
-package com.ale;
+package com.ale.threadpool;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,9 +7,9 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class RejectedExecutionHandlerTest {
+class RejectedExecutionHandlerTest {
     @Test
-    public void testAbortPolicy() {
+    void testAbortPolicy() {
         ExecutorService executorService = new ThreadPoolExecutor(1, 1, 0,
                                                                  TimeUnit.SECONDS, new SynchronousQueue<>());
         executorService.execute(() -> {
@@ -28,14 +28,14 @@ public class RejectedExecutionHandlerTest {
             }
             System.out.println(String.format("%s sleep %d s", Thread.currentThread().getName(), 1));
         });
-        
+
         executorService.shutdown();
 
     }
-    
+
     @Test
-    public void testCallerRunsPolicy(){
-        
+    void testCallerRunsPolicy() {
+
     }
 
 

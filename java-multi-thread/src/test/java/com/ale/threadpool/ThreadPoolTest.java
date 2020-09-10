@@ -1,8 +1,7 @@
-package com.ale;
+package com.ale.threadpool;
 
 import org.junit.jupiter.api.Test;
 
-import java.text.MessageFormat;
 import java.util.concurrent.*;
 
 class ThreadPoolTest {
