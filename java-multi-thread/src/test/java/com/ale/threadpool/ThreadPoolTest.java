@@ -1,5 +1,6 @@
 package com.ale.threadpool;
 
+import com.ale.thread.SleepTask;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.*;
@@ -17,12 +18,8 @@ class ThreadPoolTest {
     @Test
     void test() {
         ExecutorService service = Executors.newFixedThreadPool(2);
-        service.execute(() -> {
-            sleep(10);
-        });
-        service.execute(() -> {
-            sleep(10);
-        });
+        service.execute(new SleepTask(10));
+        service.execute(new SleepTask(10));
     }
 
     @Test
