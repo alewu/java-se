@@ -1,13 +1,12 @@
-package com.ale;
+package com.ale.lock;
 
-import com.ale.lock.SpinLock;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
 
 class SpinLockTest {
     @Test
-    public void testSpinLock() throws InterruptedException {
+    void testSpinLock() throws InterruptedException {
         SpinLock lock = new SpinLock();
         new Thread(() -> {
             lock.lock();

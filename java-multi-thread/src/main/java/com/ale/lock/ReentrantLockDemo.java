@@ -8,8 +8,8 @@ public class ReentrantLockDemo {
     private static final Lock lock = new ReentrantLock();
 
     public static void needLock() {
+        lock.lock();
         try {
-            lock.lock();
             System.out.println(Thread.currentThread().getName() + " start working!");
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
