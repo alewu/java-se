@@ -12,7 +12,7 @@ class ThreadPoolTest {
     ThreadPoolExecutor pool = new ThreadPoolExecutor(
             1, 2, 10,
             TimeUnit.SECONDS,
-            new ArrayBlockingQueue<>(5), (ThreadFactory) Thread::new,
+            new ArrayBlockingQueue<>(5), Executors.defaultThreadFactory(),
             new ThreadPoolExecutor.AbortPolicy());
 
     @Test
